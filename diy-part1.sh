@@ -9,13 +9,13 @@ echo 'src-git helloworld https://github.com/fw876/helloworld.git' >>feeds.conf.d
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
 # Add theme
-cd lede/package/lean
+cd $GITHUB_WORKSPACE/openwrt/package/lean
 rm -rf luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git luci-theme-argon
 
 # Add openclash
-mkdir package/luci-app-openclash
-cd package/luci-app-openclash
+mkdir $GITHUB_WORKSPACE/openwrt/package/luci-app-openclash
+cd $GITHUB_WORKSPACE/openwrt/package/luci-app-openclash
 git init
 git remote add -f origin https://github.com/vernesong/OpenClash.git
 git config core.sparsecheckout true
