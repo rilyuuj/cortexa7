@@ -1,4 +1,4 @@
-name: Build OpenWrt
+name: Build sunxi
 
 on:
   repository_dispatch:
